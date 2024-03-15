@@ -1,0 +1,704 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Apply box-sizing to all elements */
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif; /* Set the default font for the body */
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+
+}
+
+
+/* Navbar Style */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: #000;
+    line-height: 140%;
+    padding: 0 40px;
+   
+  }
+  
+  .navbar-logo {
+    aspect-ratio: 6.25;
+    object-fit: contain;
+    width: 150px;
+    max-width: 100%;
+    margin: auto 0;
+  }
+  
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .button {
+    background-color: transparent;
+    color: inherit;
+    border: 1px solid #191a23;
+    border-radius: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+
+ 
+/* Hover effect for navigation links */
+.navbar-links li a:hover {
+    transform: scale(1.05); /* Less dramatic scaling for a subtler effect */
+    font-weight: bold; /* Makes the font bold */
+    transition: transform 0.2s ease-out, font-weight 0.2s ease-out; /* Smooth and slightly quicker transition */
+  }
+  
+  /* Ensure a smooth transition effect even when the mouse leaves the link */
+  .navbar-links li a {
+    transition: transform 0.2s ease-out, font-weight 0.2s ease-out;
+  }
+  
+  
+  /* Hover and active effects for the button */
+  .button:hover {
+    background-color: #f0f0f0; /* Light background color on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  .button:active {
+    background-color: #e0e0e0; /* Darker background color to indicate the button is pressed */
+    transform: scale(0.98); /* Slightly reduces the size to mimic a press effect */
+    transition: transform 0.1s ease; /* Quicker transition to simulate the pressing action */
+  }
+  
+
+  /* ******************************************************* */
+
+  /* Hero Section */
+
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+  }
+  
+
+  .hero-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+
+  
+  .hero-text {
+    width: 50%;
+  }
+  
+
+  
+  .hero-heading {
+    font: 500 60px "Space Grotesk", sans-serif;
+    margin-bottom: 20px;
+  }
+  
+ 
+  
+  .hero-description {
+  
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-cta {
+  
+    border-radius: 14px;
+    background-color: #191a23;
+    color: #fff;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .hero-image-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  
+  .hero-image {
+    aspect-ratio: 1.16;
+    width: 100%;
+    object-fit: cover; /* Changed from auto to cover for better image handling */
+  }
+  
+
+  /* ************************************************************************************************ */
+
+
+  /* trusted section */
+  .trusted-by {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 80px;
+}
+
+
+.trusted-logo {
+  max-width: 120px;
+  height: auto; /* Ensures the logo maintains its aspect ratio */
+  mix-blend-mode: luminosity;
+  object-fit: contain; /* Ensures logos are fully visible and well-spaced */
+  margin: auto; /* Centers logos vertically within their flex container */
+}
+
+  /* ************************************************************************************************ */
+
+    /* Services */
+  
+  .services-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #000;
+    padding: 40px 80px;
+  }
+  
+
+  
+  .services-heading {
+    border-radius: 7px;
+    background-color: #b9ff66; /* Assuming var(--Green, #b9ff66) is defined elsewhere */
+    text-align: center; /* Center the text if flexbox is not used for alignment */
+    padding: 10px 7px; /* Adjusted for better spacing */
+    font: 500 40px "Space Grotesk", sans-serif;
+  }
+  
+  .services-description {
+    font: 400 18px "Space Grotesk", sans-serif;
+    max-width: 60%;
+  }
+  
+  /* ************************************************************************************************ */
+
+
+  .services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center; /* Centers the cards in the container */
+    padding: 20px; /* Adds some padding around the entire set of cards */
+  }
+  
+
+
+  .service-card {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 45px;
+    border: 1px solid #191a23;
+    box-shadow: 0 5px 0 #191a23;
+    background-color: #f3f3f3;
+    max-width: 550px;
+    padding: 50px;
+    gap: 20px;
+  }
+  
+  
+  .service-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .service-title {
+    font-size: 30px;
+    color: #000;
+    font-weight: 500;
+
+    background-color: var(--Green, #b9ff66);
+  }
+  
+  .service-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .service-icon {
+    width: 41px;
+    aspect-ratio: 1;
+  }
+  
+  .learn-more {
+   
+    color: #000;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 7px;
+
+  }
+  
+  .service-image .img-responsive {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.27;
+  }
+  
+  /* ************************************************************************************************ */
+
+
+  .proposal-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+  }
+  
+  .proposal-content {
+    background-color: #f3f3f3;
+    border-radius: 45px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px;
+    margin: 0 40px;
+  }
+  
+  
+  .proposal-text {
+    width: 54%;
+  }
+  
+  .proposal-title {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 26px;
+  }
+  
+  .proposal-description {
+    font-size: 18px;
+  }
+  
+  .proposal-cta {
+    display: block;
+    background-color: #191a23;
+    color: #fff;
+    padding: 20px 35px;
+    border-radius: 14px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 26px;
+    font-size: 20px;
+  }
+  
+  .proposal-image img {
+    width: 100%;
+    aspect-ratio: 1.25;
+  }
+  
+
+
+  /* ************************************************************************************************ */
+
+
+.case-study-wrapper{
+    display: flex;
+    width: 100%;
+    padding: 0 60px;
+
+}
+ 
+  .case-studies {
+    background-color: #191a23;
+    border-radius: 45px;
+    padding:  80px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+  }
+  
+ 
+  .case-study {
+    width: 28%;
+  }
+  
+
+  .case-study-description{
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  
+  .learn-more {
+  
+    color: var(--Green, #b9ff66);
+    text-decoration: none;
+   
+  }
+  
+  .case-study-image  {
+    width: 10px;
+   
+  }
+
+  .case-studies-end{
+    display: flex;
+    align-items: center;
+  }
+  
+
+  /* ********************************************************** */
+
+
+.work-process-wrapper{
+    padding: 0 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+  .work-process-card {
+    border-radius: 45px;
+    border: 1px solid #191a23;
+    box-shadow: 0px 5px 0px 0px #191a23;
+    background-color: var(--Green, #b9ff66);
+    display: flex;
+    flex-direction: column;
+    padding: 41px 60px;
+  }
+  
+ 
+  
+  
+  .work-process-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .step-number {
+    font-size: 60px;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+
+  
+  .step-title {
+    font-size: 30px;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  .work-process-icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .icon-circle {
+    background-color: #f3f3f3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 58px;
+  }
+  
+  .icon-line {
+    background-color: rgba(0, 0, 0, 1);
+    width: 5px;
+    height: 30px; /* Adjusted for visual balance */
+  }
+  
+  .work-process-description {
+    color: #000;
+    margin-top: 20px; /* Reduced margin for better spacing */
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+
+  .work-process-line{
+    background-color: black;
+    height: 1px;
+  }
+
+
+  .work-process-default-card {
+    border-radius: 45px;
+    border: 1px solid #191a23;
+    box-shadow: 0px 5px 0px 0px #191a23;
+    background-color: var(--Grey, #f3f3f3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #000;
+    font-weight: 500;
+    padding: 0 60px;
+  }
+  
+ 
+  
+  .work-process-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .step-number {
+    font-size: 60px;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+
+  
+  .step-title {
+    flex-grow: 1;
+    font-size: 30px;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+
+  
+  .work-process-image {
+    aspect-ratio: 1;
+    object-fit: cover;
+    max-width: 50px;
+    margin-top: 20px;
+    border-radius: 20px; /* Added for aesthetic */
+  }
+  
+
+  /*  ***************************************************** */
+
+  .testimonial-wrapper{
+   padding: 0 70px;
+
+  }
+
+  .testimonial-container{
+    padding: 80px;
+    background-color: #191A23;
+    border-radius: 40px;
+    overflow: hidden;
+   
+  }
+
+
+  .testimonials{
+    display: flex;
+  }
+
+  .testimonial-card {
+    display: flex;
+    max-width: 606px;
+    flex-direction: column;
+    color: #fff;
+    position: relative;
+    font-family: "Space Grotesk", sans-serif;
+    border-radius: 10px; /* Added border-radius for visual appeal */
+    overflow: hidden; /* Ensures the image conforms to the border-radius */
+    flex-shrink: 0;
+  }
+  
+  .testimonial-image {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1; /* Ensure the image stays behind the text */
+    opacity: 0.5; /* Make the image less prominent so text is readable */
+  }
+  
+  .testimonial-text {
+    z-index: 2; /* Ensure text appears above the image */
+    position: relative;
+    padding: 50px 52px;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better readability */
+  }
+  
+  .testimonial-author {
+    z-index: 2; /* Ensure author details appear above the image */
+    position: relative;
+    margin-top: 20px;
+    padding: 0 52px 20px; /* Consistent padding with the quote */
+    font-size: 20px;
+    color: var(--Green, #b9ff66); /* Maintain the brand color for author's name */
+    text-align: right; /* Align author details to the right */
+  }
+  
+
+/* *************************************** */
+
+.form-wrapper{
+    padding: 0 70px;
+}
+
+.form-content{
+    width: 45%;
+}
+
+.contact-form-container{
+    background-color: #F3F3F3;
+    padding: 40px;
+    border-radius: 40px;
+    display: flex;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+   
+    gap: 10px; /* Spacing between form elements */
+   
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    font-family: "Space Grotesk", sans-serif;
+    border-radius: 14px;
+    border: 1px solid #000;
+    padding: 10px;
+    font-size: 16px;
+    color: #898989;
+  }
+  
+  .contact-form label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #000;
+  }
+  
+  .send-message {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: var(--Dark, #191a23);
+    color: #fff;
+    padding: 10px;
+    border-radius: 14px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px; /* Spacing above the send button */
+  }
+  
+
+  /* ***************************** */
+
+  .footer {
+    border-radius: 45px 45px 0 0;
+    background-color: var(--Dark, #191a23);
+    color: #fff;
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 80px;
+  }
+  
+  .footer-content, .contact-info, .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .footer-logo {
+    width: 180px;
+    height: auto;
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-nav li a {
+    color: #fff;
+    text-decoration: none;
+    text-decoration-line: underline;
+  }
+  
+  .social-media-icons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: auto;
+  }
+  
+  .contact-info {
+    margin-top: 66px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .contact-info address {
+    font-style: normal;
+    line-height: 1.5;
+  }
+  
+  .newsletter-signup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #292a32;
+    padding: 10px;
+    border-radius: 14px;
+  }
+  
+  .newsletter-signup input[type="email"] {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
+    border-radius: 14px;
+  }
+  
+  .newsletter-signup button {
+    background-color: var(--Green, #b9ff66);
+    color: var(--Dark, #191a23);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 14px;
+    cursor: pointer;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .footer-bottom a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+ 
+  
